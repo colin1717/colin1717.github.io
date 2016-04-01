@@ -27,6 +27,11 @@ header {
   width: 195px;
   border-bottom: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
+}
+
+#topleftbox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 #topmiddlebox {
@@ -35,6 +40,11 @@ header {
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
+}
+
+#topmiddlebox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 #toprightbox {
@@ -42,6 +52,11 @@ header {
   width: 195px;
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
+}
+
+#toprightbox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 .middlerow div {
@@ -54,13 +69,23 @@ header {
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
   border-bottom: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
+}
+
+#middleleftbox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 #middlemiddlebox {
   height: 190px;
   width: 190px;
   border: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
 
+}
+
+#middlemiddlebox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 #middlerightbox {
@@ -69,7 +94,12 @@ header {
   border-top: solid 5px rgb(83, 39, 20);
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
 
+}
+
+#middlerightbox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 .bottomrow div {
@@ -81,6 +111,11 @@ header {
   width: 195px;
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
+}
+
+#bottomleftbox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 #bottommiddlebox {
@@ -89,6 +124,11 @@ header {
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
+}
+
+#bottommiddlebox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
 #bottomrightbox {
@@ -96,5 +136,10 @@ header {
   width: 195px;
   border-left: solid 5px rgb(83, 39, 20);
   border-top: solid 5px rgb(83, 39, 20);
+  background-color: rgb(244, 112, 33);
+}
+
+#bottomrightbox:hover {
+  background-color: rgb(197, 31, 43);
 }
 
