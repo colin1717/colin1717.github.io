@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(83, 39, 20);
+}
+
+header {
+  background-image: url(file:///Users/colin/Desktop/tictactoe/images/shining.jpg);
+  height: 160px;
+  color: white;
+}
