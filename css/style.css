@@ -8,7 +8,7 @@ header {
   color: white;
 }
 
-.righty {
+.board {
   background-color: rgb(244, 112, 33);
   height: 600px;
   width: 600px;
@@ -23,14 +23,14 @@ header {
 }
 
 #topleftbox {
-  height: 190px;
-  width: 190px;
+  height: 195px;
+  width: 195px;
   border-bottom: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
 }
 
 #topmiddlebox {
-  height: 190px;
+  height: 195px;
   width: 190px;
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
@@ -38,8 +38,8 @@ header {
 }
 
 #toprightbox {
-  height: 190px;
-  width: 190px;
+  height: 195px;
+  width: 195px;
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
 }
@@ -50,7 +50,7 @@ header {
 
 #middleleftbox {
   height: 190px;
-  width: 190px;
+  width: 195px;
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
   border-bottom: solid 5px rgb(83, 39, 20);
@@ -65,7 +65,7 @@ header {
 
 #middlerightbox {
   height: 190px;
-  width: 190px;
+  width: 195px;
   border-top: solid 5px rgb(83, 39, 20);
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
@@ -77,14 +77,14 @@ header {
 }
 
 #bottomleftbox {
-  height: 190px;
-  width: 190px;
+  height: 195px;
+  width: 195px;
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
 }
 
 #bottommiddlebox {
-  height: 190px;
+  height: 195px;
   width: 190px;
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
@@ -92,8 +92,8 @@ header {
 }
 
 #bottomrightbox {
-  height: 190px;
-  width: 190px;
+  height: 195px;
+  width: 195px;
   border-left: solid 5px rgb(83, 39, 20);
   border-top: solid 5px rgb(83, 39, 20);
 }
