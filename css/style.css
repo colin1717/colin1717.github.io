@@ -1,25 +1,22 @@
 body {
   background-image: url(file:///Users/colin/Desktop/tictactoe/images/shiningtrim.jpg);
-
+  font-family: 'Cinzel', serif;
 }
 
 header {
-  height: 160px;
+  height: 80px;
   color: white;
-}
-
-section.row {
-  height: 600px
 }
 
 .righty {
   background-color: rgb(244, 112, 33);
   height: 600px;
+  width: 600px;
   border-style: solid;
   border-width: 5px;
   border-color: rgb(83, 39, 20);
-  border-right-color: rgb(197, 31, 43);
   margin-bottom: 100px;
 }
+
 
 
