@@ -18,5 +18,83 @@ header {
   margin-bottom: 100px;
 }
 
+.toprow div {
+  display: inline-block;
+}
 
+#topleftbox {
+  height: 190px;
+  width: 190px;
+  border-bottom: solid 5px rgb(83, 39, 20);
+  border-right: solid 5px rgb(83, 39, 20);
+}
+
+#topmiddlebox {
+  height: 190px;
+  width: 190px;
+  border-bottom: solid 5px rgb(83, 39, 20);
+  border-left: solid 5px rgb(83, 39, 20);
+  border-right: solid 5px rgb(83, 39, 20);
+}
+
+#toprightbox {
+  height: 190px;
+  width: 190px;
+  border-bottom: solid 5px rgb(83, 39, 20);
+  border-left: solid 5px rgb(83, 39, 20);
+}
+
+.middlerow div {
+  display: inline-block;
+}
+
+#middleleftbox {
+  height: 190px;
+  width: 190px;
+  border-top: solid 5px rgb(83, 39, 20);
+  border-right: solid 5px rgb(83, 39, 20);
+  border-bottom: solid 5px rgb(83, 39, 20);
+}
+
+#middlemiddlebox {
+  height: 190px;
+  width: 190px;
+  border: solid 5px rgb(83, 39, 20);
+
+}
+
+#middlerightbox {
+  height: 190px;
+  width: 190px;
+  border-top: solid 5px rgb(83, 39, 20);
+  border-bottom: solid 5px rgb(83, 39, 20);
+  border-left: solid 5px rgb(83, 39, 20);
+
+}
+
+.bottomrow div {
+  display: inline-block;
+}
+
+#bottomleftbox {
+  height: 190px;
+  width: 190px;
+  border-top: solid 5px rgb(83, 39, 20);
+  border-right: solid 5px rgb(83, 39, 20);
+}
+
+#bottommiddlebox {
+  height: 190px;
+  width: 190px;
+  border-top: solid 5px rgb(83, 39, 20);
+  border-right: solid 5px rgb(83, 39, 20);
+  border-left: solid 5px rgb(83, 39, 20);
+}
+
+#bottomrightbox {
+  height: 190px;
+  width: 190px;
+  border-left: solid 5px rgb(83, 39, 20);
+  border-top: solid 5px rgb(83, 39, 20);
+}
 
