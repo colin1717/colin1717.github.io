@@ -15,17 +15,18 @@ header {
 .lefty {
   color: white;
   text-align: right;
+  position: relative;
+  left: 100px;
 }
 
 #startbutton {
+  display: inline-block;
   height: 50px;
   width: 120px;
   background-color: white;
   border: 5px solid rgb(83, 39, 20);
   color: black;
   text-align: center;
-  position: relative;
-  left: 225px;
 }
 
 #startbutton:hover {
