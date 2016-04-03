@@ -32,6 +32,26 @@ header {
   background-color: rgb(197, 31, 43);
 }
 
+.scoreboxes div {
+  display: inline-block;
+  margin-top: 50px;
+}
+
+#jacks_score {
+  height: 125px;
+  width: 125px;
+  background-color: white;
+  border: 5px solid rgb(83, 39, 20);
+}
+
+#hotels_score {
+  height: 125px;
+  width: 125px;
+  background-color: white;
+  border: 5px solid rgb(83, 39, 20);
+  margin-left: 15px;
+}
+
 .board {
   background-color: rgb(244, 112, 33);
   height: 600px;
