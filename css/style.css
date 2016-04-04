@@ -34,8 +34,10 @@ header {
   background-color: rgb(197, 31, 43);
 }
 
-.scoreboxes p {
-
+.scoreboxes h1 {
+  color: rgb(197, 31, 43);
+  text-align: center;
+  font-size: 50pt;
 }
 
 .scoreboxes div {
