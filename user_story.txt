@@ -1,0 +1,54 @@
+//////////////////////////////////////////////////////////////
+  Tic Tac Toe (the shining)
+////////////////////////////////////////////////////
+
+
+  User clicks "Play". ('#startbutton');
+
+
+  Upperleft '.intro' box text updates to game rules.
+    "Win Tic Tac Toe to keep this hotel from taking what's left
+    of your sanity. Don't loose 3 times."
+
+
+  Randomize who goes first (player/cpu);
+  if (player) {
+    update text in '#startbutton' to 'Your Turn';
+  } else {
+    proceed with start of game function.
+  }
+
+  Game
+  if (user goes first){
+    as user hovers over available spaces they change from orange to red;
+    user clicks space to choose and the space changes to a picture of Jack;
+    CPU's turn;
+  } else {
+    radomize which space CPUs selects;
+    selected space changes to a picture from the shining(the hotel, the twins, scary stuff);
+    Player's turn;
+  }
+
+  Continue until either party wins
+  if (player wins) {
+    update Jack's Score += 1;
+    Game starts again;
+  } else if (CPU Wins) {
+    update Hotel's Score += 1;
+        if (hotel's score > 2){
+          end game by changing entire board to frozen Jack;
+          change text in '#startbutton' to 'play again';
+        } else {
+          change the picture of Jack for next round to more distressed version;
+          Game starts again;}
+  } else (draw) {
+    update Hotel's Score += 1;
+    if (hotel's score > 2){
+          end game by changing entire board to frozen Jack;
+          change text in '#startbutton' to 'play again';
+        } else {
+          change the picture of Jack for next round to more distressed version;
+          Game starts again;}
+  }
+
+
