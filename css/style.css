@@ -19,6 +19,13 @@ header {
   left: 100px;
 }
 
+.intro {
+  background-color: rgb(244, 112, 33);
+  color: white;
+  padding: 10px;
+  border: solid 5px rgb(83, 39, 20);
+}
+
 #startbutton {
   display: inline-block;
   height: 50px;
