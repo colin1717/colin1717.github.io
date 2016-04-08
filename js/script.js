@@ -2,6 +2,9 @@ var board = [null, null, null,
              null, null, null,
              null, null, null];
 
+playerScore = 0;
+cpuScore = 0;
+
 //change text in '.intro'
 function showRules(){
   var introText = document.getElementById('introText');
@@ -24,46 +27,108 @@ function userTurn(){
   buttonText.innerHTML = "Your Turn";
 }
 
-//take click and update board if space value is null
+//take User click and update board if space value is null
 function userClick(square){
   if (square === 'board[0]'){
     if (board[0] === null){
       board[0] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[1]'){
     if (board[1] === null){
       board[1] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[2]'){
     if (board[2] === null){
       board[2] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[3]'){
     if (board[3] === null){
       board[3] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[4]'){
     if (board[4] === null){
       board[4] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[5]'){
     if (board[5] === null){
       board[5] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[6]'){
     if (board[6] = 5){
       board[6] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[7]'){
     if (board[7] = 5){
       board[7] = 5;
+      checkUserWin();
     }
   }else if (square === 'board[8]'){
     if (board[8] = 5){
       board[8] = 5;
+      checkUserWin();
     }
   }
 }
+
+//update html playerScore with playerScore variable
+function updatePlayerScore(){
+  playerScoreText = document.getElementById('playerscore');
+  playerScoreText.innerHTML = playerScore;
+}
+
+//check for user win conditions
+function checkUserWin(){
+  if (board[0] + board[1] + board[2] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+    resetBoard();
+  } else if (board[3] + board[4] + board[5] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+  } else if (board[6] + board[7] + board[8] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+    resetBoard();
+  } else if (board[0] + board[3] + board[6] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+    resetBoard();
+  } else if (board[1] + board[4] + board[7] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+    resetBoard();
+  } else if (board[2] + board[5] + board[8] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+    resetBoard();
+  } else if (board[0] + board[4] + board[8] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+    resetBoard();
+  } else if (board[2] + board[4] + board[6] === 15){
+    console.log('User WIN!');
+    playerScore += 1;
+    updatePlayerScore();
+    resetBoard();
+  }
+}
+
+//add a picture of jack to square that is specified as argument
+
 
 //cpu chooses a square
 function cpuChoice(){
@@ -111,6 +176,20 @@ function checkCpuWin(){
     console.log('CPU WIN!');
   }
 }
+
+//reset board spaces to null, remove pictures
+function resetBoard(){
+  for (var i = 0; i < board.length; i++){
+    board[i] = null;
+  }
+  console.log(board);
+}
+
+//image link arrays
+var jackPic = ["url('file:///Users/colin/Desktop/tictactoe/images/jacks/1jack.jpg');",
+            "url('file:///Users/colin/Desktop/tictactoe/images/jacks/2jack.jpg')",
+            "url('file:///Users/colin/Desktop/tictactoe/images/jacks/3jack.jpg')"];
+
 
 //Event Handlers
 //Startbutton
