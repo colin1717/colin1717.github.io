@@ -9,15 +9,16 @@ cpuScore = 0;
 function showRules(){
   var introText = document.getElementById('introText');
   introText.innerHTML = "Win Tic Tac Toe to keep this hotel from taking what's left of Jack's sanity. Don't loose 3 times.";
+  coinToss();
 }
 
 //determine if player or cpu goes first
 function coinToss(){
   var num = Math.floor((Math.random() * 10) + 1);
   if (num < 6) {
-    return 'player';
+    userTurn();
   } else {
-    return 'cpu';
+    cpuChoice();
   }
 }
 
@@ -278,6 +279,8 @@ function checkCpuWin(){
     cpuScore += 1;
     updateCpuScore();
     resetBoard();
+  } else {
+    userTurn();
   }
 }
 
