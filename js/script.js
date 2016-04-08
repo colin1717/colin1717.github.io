@@ -145,35 +145,94 @@ function checkUserWin(){
 function cpuChoice(){
   var num = Math.floor((Math.random() * 10) + 1);
   if (num <= 1){
-    board[4] = 1;
-    console.log(board);
+    if (board[4] === null){
+      board[4] = 1;
+      $('#middlemiddlebox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 2){
-    board[0] = 1;
-    console.log(board);
+    if (board[0] === null){
+      board[0] = 1;
+      $('#topleftbox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 3){
-    board[2] = 1;
-    console.log(board);
+    if (board[2] === null){
+      board[2] = 1;
+      $('#toprightbox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 4){
-    board[6] = 1;
-    console.log(board);
+    if (board[6] === null){
+      board[6] = 1;
+      $('#bottomleftbox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 5){
-    board[8] = 1;
-    console.log(board);
+    if (board[8] === null){
+      board[8] = 1;
+      $('#bottomrightbox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 6){
-    board[1] = 1;
-    console.log(board);
+    if (board[1] === null){
+      board[1] = 1;
+      $('#topmiddlebox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 7){
-    board[7] = 1;
-    console.log(board);
+    if (board[7] === null){
+      board[7] = 1;
+      $('#bottommiddlebox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 8){
-    board[5] = 1;
-    console.log(board);
+    if (board[5] === null){
+      board[5] = 1;
+      $('#middlerightbox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
   } else if (num == 9){
-    board[3] = 1;
-    console.log(board);
-  } else if (num === 10) {
-    board[4] = 1;
-    console.log(board);
+    if (board[3] === null){
+      board[3] = 1;
+      $('#middleleftbox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();
+    }
+  } else if (num === 10){
+    if (board[4] === null){
+      board[4] = 1;
+      $('#middlemiddlebox').addClass('boxbrown');
+      console.log(board);
+      checkCpuWin();
+    } else {
+      cpuChoice();    }
   }
 }
 
@@ -182,28 +241,49 @@ function checkCpuWin(){
   if (board[0] + board[1] + board[2] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   } else if (board[3] + board[4] + board[5] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   } else if (board[6] + board[7] + board[8] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   } else if (board[0] + board[3] + board[6] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   } else if (board[1] + board[4] + board[7] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   } else if (board[2] + board[5] + board[8] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   } else if (board[0] + board[4] + board[8] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   } else if (board[2] + board[4] + board[6] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
+    updateCpuScore();
+    resetBoard();
   }
+}
+
+function updateCpuScore(){
+  cpuScoreText = document.getElementById('cpuscore');
+  cpuScoreText.innerHTML = cpuScore;
 }
 
 //reset board spaces to null, remove pictures

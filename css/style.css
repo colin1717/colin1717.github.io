@@ -100,6 +100,10 @@ header {
   background-color: rgb(197, 31, 43);
 }
 
+.boxbrown {
+  background-color: rgb(83, 39, 20);
+}
+
 #topmiddlebox {
   height: 195px;
   width: 190px;
