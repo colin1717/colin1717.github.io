@@ -24,6 +24,7 @@ header {
   color: white;
   padding: 10px;
   border: solid 5px rgb(83, 39, 20);
+  height: 160px;
 }
 
 #startbutton {
@@ -203,5 +204,10 @@ header {
 
 #bottomrightbox:hover {
   background-color: rgb(197, 31, 43);
+}
+
+
+.test {
+  color: aquamarine;
 }
 

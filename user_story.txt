@@ -8,7 +8,7 @@
 
   Upperleft '.intro' box text updates to game rules.
     "Win Tic Tac Toe to keep this hotel from taking what's left
-    of your sanity. Don't loose 3 times."
+    of Jack's sanity. Don't loose 3 times."
 
 
   Randomize who goes first (player/cpu);
@@ -35,7 +35,7 @@
     Game starts again;
   } else if (CPU Wins) {
     update Hotel's Score += 1;
-        if (hotel's score > 2){
+        if (hotel's score > 3){
           end game by changing entire board to frozen Jack;
           change text in '#startbutton' to 'play again';
         } else {
@@ -43,7 +43,7 @@
           Game starts again;}
   } else (draw) {
     update Hotel's Score += 1;
-    if (hotel's score > 2){
+    if (hotel's score > 3){
           end game by changing entire board to frozen Jack;
           change text in '#startbutton' to 'play again';
         } else {
