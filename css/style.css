@@ -90,10 +90,13 @@ header {
   width: 195px;
   border-bottom: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #topleftbox:hover {
+  background-color: rgb(197, 31, 43);
+}
+
+.boxred{
   background-color: rgb(197, 31, 43);
 }
 
@@ -103,7 +106,6 @@ header {
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #topmiddlebox:hover {
@@ -115,7 +117,6 @@ header {
   width: 195px;
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #toprightbox:hover {
@@ -132,7 +133,6 @@ header {
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
   border-bottom: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #middleleftbox:hover {
@@ -143,7 +143,6 @@ header {
   height: 190px;
   width: 190px;
   border: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #middlemiddlebox:hover {
@@ -156,8 +155,6 @@ header {
   border-top: solid 5px rgb(83, 39, 20);
   border-bottom: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
-
 }
 
 #middlerightbox:hover {
@@ -173,7 +170,6 @@ header {
   width: 195px;
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #bottomleftbox:hover {
@@ -186,7 +182,6 @@ header {
   border-top: solid 5px rgb(83, 39, 20);
   border-right: solid 5px rgb(83, 39, 20);
   border-left: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #bottommiddlebox:hover {
@@ -198,7 +193,6 @@ header {
   width: 195px;
   border-left: solid 5px rgb(83, 39, 20);
   border-top: solid 5px rgb(83, 39, 20);
-  background-color: rgb(244, 112, 33);
 }
 
 #bottomrightbox:hover {

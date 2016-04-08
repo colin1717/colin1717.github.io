@@ -32,46 +32,55 @@ function userClick(square){
   if (square === 'board[0]'){
     if (board[0] === null){
       board[0] = 5;
+      $('#topleftbox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[1]'){
     if (board[1] === null){
       board[1] = 5;
+      $('#topmiddlebox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[2]'){
     if (board[2] === null){
       board[2] = 5;
+      $('#toprightbox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[3]'){
     if (board[3] === null){
       board[3] = 5;
+       $('#middleleftbox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[4]'){
     if (board[4] === null){
       board[4] = 5;
+       $('#middlemiddlebox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[5]'){
     if (board[5] === null){
       board[5] = 5;
+       $('#middlerightbox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[6]'){
     if (board[6] = 5){
       board[6] = 5;
+      $('#bottomleftbox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[7]'){
     if (board[7] = 5){
       board[7] = 5;
+      $('#bottommiddlebox').addClass('boxred');
       checkUserWin();
     }
   }else if (square === 'board[8]'){
     if (board[8] = 5){
       board[8] = 5;
+       $('#bottomrightbox').addClass('boxred');
       checkUserWin();
     }
   }
@@ -124,6 +133,8 @@ function checkUserWin(){
     playerScore += 1;
     updatePlayerScore();
     resetBoard();
+  } else {
+    cpuChoice();
   }
 }
 
@@ -135,24 +146,34 @@ function cpuChoice(){
   var num = Math.floor((Math.random() * 10) + 1);
   if (num <= 1){
     board[4] = 1;
+    console.log(board);
   } else if (num == 2){
     board[0] = 1;
+    console.log(board);
   } else if (num == 3){
     board[2] = 1;
+    console.log(board);
   } else if (num == 4){
     board[6] = 1;
+    console.log(board);
   } else if (num == 5){
     board[8] = 1;
+    console.log(board);
   } else if (num == 6){
     board[1] = 1;
+    console.log(board);
   } else if (num == 7){
     board[7] = 1;
+    console.log(board);
   } else if (num == 8){
     board[5] = 1;
+    console.log(board);
   } else if (num == 9){
     board[3] = 1;
-  } else {
+    console.log(board);
+  } else if (num === 10) {
     board[4] = 1;
+    console.log(board);
   }
 }
 
@@ -160,20 +181,28 @@ function cpuChoice(){
 function checkCpuWin(){
   if (board[0] + board[1] + board[2] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   } else if (board[3] + board[4] + board[5] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   } else if (board[6] + board[7] + board[8] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   } else if (board[0] + board[3] + board[6] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   } else if (board[1] + board[4] + board[7] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   } else if (board[2] + board[5] + board[8] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   } else if (board[0] + board[4] + board[8] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   } else if (board[2] + board[4] + board[6] === 3){
     console.log('CPU WIN!');
+    cpuScore += 1;
   }
 }
 
