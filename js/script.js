@@ -3,12 +3,16 @@ var board = [null, null, null,
              null, null, null];
 
 playerScore = 0;
-cpuScore = 0;
+cpuScore = 2;
 
 //change text in '.intro'
 function showRules(){
   var introText = document.getElementById('introText');
   introText.innerHTML = "Win Tic Tac Toe to keep this hotel from taking what's left of Jack's sanity. Don't loose 3 times.";
+  resetBoard();
+  $('#board').removeClass('coldjack');
+  playerScore = 0;
+  cpuScore = 0;
   coinToss();
 }
 
@@ -123,9 +127,6 @@ function checkUserWin(){
   }
   updatePlayerScore();
 }
-
-//add a picture of jack to square that is specified as argument
-
 
 //cpu chooses a square
 function cpuChoice(){
@@ -251,11 +252,32 @@ function checkCpuWin(){
     userTurn();
   }
   updateCpuScore();
+  checkGameOver();
 }
 
 function updateCpuScore(){
   cpuScoreText = document.getElementById('cpuscore');
   cpuScoreText.innerHTML = cpuScore;
+}
+
+//add a picture of jack to square that is specified as argument
+
+
+//gameOver check to see if hotel has won 3 times
+function checkGameOver(){
+  if (cpuScore > 2){
+    console.log("gameovergameover");
+    gameOver();
+  }
+}
+
+//overlay frozen jack on gameboard. update text in intro and playbutton
+function gameOver(){
+  $('#board').addClass('coldjack');
+  var introText = document.getElementById('introText');
+  introText.innerHTML = "Here's Johnny. Looks like it's going to be a long winter.";
+  var buttonText = document.getElementById('startbuttontext');
+  buttonText.innerHTML = "Play Again";
 }
 
 //reset board spaces to null, remove pictures

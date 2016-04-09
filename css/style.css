@@ -104,6 +104,10 @@ header {
   background-color: rgb(83, 39, 20);
 }
 
+.coldjack {
+  background-image: url(file:///Users/colin/Desktop/tictactoe/images/jacks/coldjack.jpg);
+}
+
 #topmiddlebox {
   height: 195px;
   width: 190px;
