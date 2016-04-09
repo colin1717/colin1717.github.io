@@ -3,7 +3,7 @@ var board = [null, null, null,
              null, null, null];
 
 playerScore = 0;
-cpuScore = 2;
+cpuScore = 0;
 
 //change text in '.intro'
 function showRules(){
@@ -32,55 +32,68 @@ function userTurn(){
   buttonText.innerHTML = "Your Turn";
 }
 
+
+
 //take User click and update board if space value is null
 function userClick(square){
   if (square === 'board[0]'){
     if (board[0] === null){
       board[0] = 5;
-      $('#topleftbox').addClass('boxred');
+      $('#topleftbox').addClass(whichJack());
     }
   }else if (square === 'board[1]'){
     if (board[1] === null){
       board[1] = 5;
-      $('#topmiddlebox').addClass('boxred');
+      $('#topmiddlebox').addClass(whichJack());
     }
   }else if (square === 'board[2]'){
     if (board[2] === null){
       board[2] = 5;
-      $('#toprightbox').addClass('boxred');
+      $('#toprightbox').addClass(whichJack());
     }
   }else if (square === 'board[3]'){
     if (board[3] === null){
       board[3] = 5;
-       $('#middleleftbox').addClass('boxred');
+       $('#middleleftbox').addClass(whichJack());
     }
   }else if (square === 'board[4]'){
     if (board[4] === null){
       board[4] = 5;
-       $('#middlemiddlebox').addClass('boxred');
+       $('#middlemiddlebox').addClass(whichJack());
     }
   }else if (square === 'board[5]'){
     if (board[5] === null){
       board[5] = 5;
-       $('#middlerightbox').addClass('boxred');
+       $('#middlerightbox').addClass(whichJack());
     }
   }else if (square === 'board[6]'){
     if (board[6] = 5){
       board[6] = 5;
-      $('#bottomleftbox').addClass('boxred');
+      $('#bottomleftbox').addClass(whichJack());
     }
   }else if (square === 'board[7]'){
     if (board[7] = 5){
       board[7] = 5;
-      $('#bottommiddlebox').addClass('boxred');
+      $('#bottommiddlebox').addClass(whichJack());
     }
   }else if (square === 'board[8]'){
     if (board[8] = 5){
       board[8] = 5;
-       $('#bottomrightbox').addClass('boxred');
+       $('#bottomrightbox').addClass(whichJack());
     }
   }
   checkUserWin();
+}
+
+//depending on hotel wins, pick a jack to use for squares
+function whichJack(){
+  if (cpuScore === 0){
+    return 'boxjack1';
+  } else if (cpuScore === 1){
+    return 'boxjack2';
+  } else if (cpuScore === 2){
+    return 'boxjack3';
+  }
 }
 
 //update html playerScore with playerScore variable
@@ -286,15 +299,15 @@ function resetBoard(){
     board[i] = null;
   }
   console.log(board + 'reseting board');
-  $('#topleftbox').removeClass('boxbrown boxred');
-  $('#topmiddlebox').removeClass('boxbrown boxred');
-  $('#toprightbox').removeClass('boxbrown boxred');
-  $('#middleleftbox').removeClass('boxbrown boxred');
-  $('#middlemiddlebox').removeClass('boxbrown boxred');
-  $('#middlerightbox').removeClass('boxbrown boxred');
-  $('#bottomleftbox').removeClass('boxbrown boxred');
-  $('#bottommiddlebox').removeClass('boxbrown boxred');
-  $('#bottomrightbox').removeClass('boxbrown boxred');
+  $('#topleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#topmiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#toprightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#middleleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#middlemiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#middlerightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#bottomleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#bottommiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#bottomrightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
 }
 
 //image link arrays

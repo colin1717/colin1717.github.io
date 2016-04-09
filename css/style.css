@@ -96,8 +96,16 @@ header {
   background-color: rgb(197, 31, 43);
 }
 
-.boxred{
-  background-color: rgb(197, 31, 43);
+.boxjack1{
+  background-image: url(file:///Users/colin/Desktop/tictactoe/images/jacks/1jack.jpg);
+}
+
+.boxjack2{
+  background-image: url(file:///Users/colin/Desktop/the%20shining/colins%20shining/jacks/2jack.jpg);
+}
+
+.boxjack3{
+  background-image: url(file:///Users/colin/Desktop/the%20shining/colins%20shining/jacks/3jack.jpg);
 }
 
 .boxbrown {
