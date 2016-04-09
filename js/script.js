@@ -34,57 +34,49 @@ function userClick(square){
     if (board[0] === null){
       board[0] = 5;
       $('#topleftbox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[1]'){
     if (board[1] === null){
       board[1] = 5;
       $('#topmiddlebox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[2]'){
     if (board[2] === null){
       board[2] = 5;
       $('#toprightbox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[3]'){
     if (board[3] === null){
       board[3] = 5;
        $('#middleleftbox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[4]'){
     if (board[4] === null){
       board[4] = 5;
        $('#middlemiddlebox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[5]'){
     if (board[5] === null){
       board[5] = 5;
        $('#middlerightbox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[6]'){
     if (board[6] = 5){
       board[6] = 5;
       $('#bottomleftbox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[7]'){
     if (board[7] = 5){
       board[7] = 5;
       $('#bottommiddlebox').addClass('boxred');
-      checkUserWin();
     }
   }else if (square === 'board[8]'){
     if (board[8] = 5){
       board[8] = 5;
        $('#bottomrightbox').addClass('boxred');
-      checkUserWin();
     }
   }
+  checkUserWin();
 }
 
 //update html playerScore with playerScore variable
@@ -143,7 +135,6 @@ function cpuChoice(){
       board[4] = 1;
       $('#middlemiddlebox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -152,7 +143,6 @@ function cpuChoice(){
       board[0] = 1;
       $('#topleftbox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -161,7 +151,6 @@ function cpuChoice(){
       board[2] = 1;
       $('#toprightbox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -170,7 +159,6 @@ function cpuChoice(){
       board[6] = 1;
       $('#bottomleftbox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -179,7 +167,6 @@ function cpuChoice(){
       board[8] = 1;
       $('#bottomrightbox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -188,7 +175,6 @@ function cpuChoice(){
       board[1] = 1;
       $('#topmiddlebox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -197,7 +183,6 @@ function cpuChoice(){
       board[7] = 1;
       $('#bottommiddlebox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -206,7 +191,6 @@ function cpuChoice(){
       board[5] = 1;
       $('#middlerightbox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -215,7 +199,6 @@ function cpuChoice(){
       board[3] = 1;
       $('#middleleftbox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();
     }
@@ -224,10 +207,10 @@ function cpuChoice(){
       board[4] = 1;
       $('#middlemiddlebox').addClass('boxbrown');
       console.log(board);
-      checkCpuWin();
     } else {
       cpuChoice();    }
   }
+  checkCpuWin();
 }
 
 //check for CPU win conditions
@@ -284,12 +267,12 @@ function resetBoard(){
   $('#topleftbox').removeClass('boxbrown boxred');
   $('#topmiddlebox').removeClass('boxbrown boxred');
   $('#toprightbox').removeClass('boxbrown boxred');
-  $('#middleleftbox').removeClass('.boxbrown boxred');
-  $('#middlemiddlebox').removeClass('.boxbrown boxred');
-  $('#middlerightbox').removeClass('.boxbrown boxred');
-  $('#bottomleftbox').removeClass('.boxbrown boxred');
-  $('#bottommiddlebox').removeClass('.boxbrown boxred');
-  $('#bottomrightbox').removeClass('.boxbrown boxred');
+  $('#middleleftbox').removeClass('boxbrown boxred');
+  $('#middlemiddlebox').removeClass('boxbrown boxred');
+  $('#middlerightbox').removeClass('boxbrown boxred');
+  $('#bottomleftbox').removeClass('boxbrown boxred');
+  $('#bottommiddlebox').removeClass('boxbrown boxred');
+  $('#bottomrightbox').removeClass('boxbrown boxred');
 }
 
 //image link arrays
