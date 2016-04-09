@@ -98,45 +98,38 @@ function checkUserWin(){
   if (board[0] + board[1] + board[2] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
     resetBoard();
   } else if (board[3] + board[4] + board[5] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
   } else if (board[6] + board[7] + board[8] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
     resetBoard();
   } else if (board[0] + board[3] + board[6] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
     resetBoard();
   } else if (board[1] + board[4] + board[7] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
     resetBoard();
   } else if (board[2] + board[5] + board[8] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
     resetBoard();
   } else if (board[0] + board[4] + board[8] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
     resetBoard();
   } else if (board[2] + board[4] + board[6] === 15){
     console.log('User WIN!');
     playerScore += 1;
-    updatePlayerScore();
     resetBoard();
   } else {
     cpuChoice();
   }
+  updatePlayerScore();
 }
 
 //add a picture of jack to square that is specified as argument
@@ -242,46 +235,39 @@ function checkCpuWin(){
   if (board[0] + board[1] + board[2] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else if (board[3] + board[4] + board[5] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else if (board[6] + board[7] + board[8] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else if (board[0] + board[3] + board[6] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else if (board[1] + board[4] + board[7] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else if (board[2] + board[5] + board[8] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else if (board[0] + board[4] + board[8] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else if (board[2] + board[4] + board[6] === 3){
     console.log('CPU WIN!');
     cpuScore += 1;
-    updateCpuScore();
     resetBoard();
   } else {
     userTurn();
   }
+  updateCpuScore();
 }
 
 function updateCpuScore(){
@@ -294,7 +280,16 @@ function resetBoard(){
   for (var i = 0; i < board.length; i++){
     board[i] = null;
   }
-  console.log(board);
+  console.log(board + 'reseting board');
+  $('#topleftbox').removeClass('boxbrown boxred');
+  $('#topmiddlebox').removeClass('boxbrown boxred');
+  $('#toprightbox').removeClass('boxbrown boxred');
+  $('#middleleftbox').removeClass('.boxbrown boxred');
+  $('#middlemiddlebox').removeClass('.boxbrown boxred');
+  $('#middlerightbox').removeClass('.boxbrown boxred');
+  $('#bottomleftbox').removeClass('.boxbrown boxred');
+  $('#bottommiddlebox').removeClass('.boxbrown boxred');
+  $('#bottomrightbox').removeClass('.boxbrown boxred');
 }
 
 //image link arrays
