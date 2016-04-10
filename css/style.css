@@ -22,7 +22,7 @@ header {
 .intro {
   background-color: rgb(244, 112, 33);
   color: white;
-  padding: 10px;
+  padding: 5px;
   border: solid 5px rgb(83, 39, 20);
   height: 160px;
 }

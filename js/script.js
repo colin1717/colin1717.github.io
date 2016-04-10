@@ -8,7 +8,7 @@ cpuScore = 0;
 //change text in '.intro'
 function showRules(){
   var introText = document.getElementById('introText');
-  introText.innerHTML = "Win Tic Tac Toe to keep this hotel from taking what's left of Jack's sanity. Don't loose 3 times.";
+  introText.innerHTML = "What'll it be, Mr. Torrance? <br> Here's to five miserable months on the wagon and all the irreparable harm that it's caused me.";
   playerScore = 0;
   cpuScore = 0;
   updateCpuScore();
@@ -282,6 +282,15 @@ function checkCpuWin(){
   checkGameOver();
 }
 
+function updateIntroText(){
+  var introText = document.getElementById('introText');
+  if (cpuScore === 1){
+    introText.innerHTML = "Hello, Danny. Come and play with us. Come and play with us, Danny. Forever... and ever... and ever.";
+  } else if (cpuScore === 2){
+    introText.innerHTML = "I dreamed that I, that I killed you and Danny. But I didn't just kill ya. I cut you up in little pieces. Oh my God. I must be losing my mind.";
+  }
+}
+
 function updateCpuScore(){
   cpuScoreText = document.getElementById('cpuscore');
   cpuScoreText.innerHTML = cpuScore;
@@ -299,7 +308,7 @@ function checkGameOver(){
 function gameOver(){
   $('#board').addClass('coldjack');
   var introText = document.getElementById('introText');
-  introText.innerHTML = "Here's Johnny. Looks like it's going to be a long winter.";
+  introText.innerHTML = "The old-timers used to call it cabin fever. A claustrophobic reaction which can occur when people are shut in together over long periods of time.";
   var buttonText = document.getElementById('startbuttontext');
   buttonText.innerHTML = "Play Again";
 }
@@ -318,7 +327,7 @@ function resetBoard(){
   $('#bottomleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
   $('#bottommiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
   $('#bottomrightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
-  coinToss();
+  updateIntroText();
 }
 
 
