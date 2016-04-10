@@ -9,10 +9,12 @@ cpuScore = 0;
 function showRules(){
   var introText = document.getElementById('introText');
   introText.innerHTML = "Win Tic Tac Toe to keep this hotel from taking what's left of Jack's sanity. Don't loose 3 times.";
-  resetBoard();
-  $('#board').removeClass('coldjack');
   playerScore = 0;
   cpuScore = 0;
+  updateCpuScore();
+  updatePlayerScore();
+  resetBoard();
+  $('#board').removeClass('coldjack');
   coinToss();
 }
 
@@ -96,6 +98,18 @@ function whichJack(){
   }
 }
 
+//pick a different boxhotel class for each cpuChoice
+function whichHotel(){
+  if (cpuScore === 0){
+    return 'boxhotel1';
+  } else if (cpuScore === 1){
+    return 'boxhotel2';
+  } else if (cpuScore === 2){
+    return 'boxhotel3';
+  }
+}
+
+
 //update html playerScore with playerScore variable
 function updatePlayerScore(){
   playerScoreText = document.getElementById('playerscore');
@@ -147,7 +161,7 @@ function cpuChoice(){
   if (num <= 1){
     if (board[4] === null){
       board[4] = 1;
-      $('#middlemiddlebox').addClass('boxbrown');
+      $('#middlemiddlebox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -155,7 +169,7 @@ function cpuChoice(){
   } else if (num == 2){
     if (board[0] === null){
       board[0] = 1;
-      $('#topleftbox').addClass('boxbrown');
+      $('#topleftbox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -163,7 +177,7 @@ function cpuChoice(){
   } else if (num == 3){
     if (board[2] === null){
       board[2] = 1;
-      $('#toprightbox').addClass('boxbrown');
+      $('#toprightbox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -171,7 +185,7 @@ function cpuChoice(){
   } else if (num == 4){
     if (board[6] === null){
       board[6] = 1;
-      $('#bottomleftbox').addClass('boxbrown');
+      $('#bottomleftbox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -179,7 +193,7 @@ function cpuChoice(){
   } else if (num == 5){
     if (board[8] === null){
       board[8] = 1;
-      $('#bottomrightbox').addClass('boxbrown');
+      $('#bottomrightbox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -187,7 +201,7 @@ function cpuChoice(){
   } else if (num == 6){
     if (board[1] === null){
       board[1] = 1;
-      $('#topmiddlebox').addClass('boxbrown');
+      $('#topmiddlebox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -195,7 +209,7 @@ function cpuChoice(){
   } else if (num == 7){
     if (board[7] === null){
       board[7] = 1;
-      $('#bottommiddlebox').addClass('boxbrown');
+      $('#bottommiddlebox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -203,7 +217,7 @@ function cpuChoice(){
   } else if (num == 8){
     if (board[5] === null){
       board[5] = 1;
-      $('#middlerightbox').addClass('boxbrown');
+      $('#middlerightbox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -211,7 +225,7 @@ function cpuChoice(){
   } else if (num == 9){
     if (board[3] === null){
       board[3] = 1;
-      $('#middleleftbox').addClass('boxbrown');
+      $('#middleleftbox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();
@@ -219,7 +233,7 @@ function cpuChoice(){
   } else if (num === 10){
     if (board[4] === null){
       board[4] = 1;
-      $('#middlemiddlebox').addClass('boxbrown');
+      $('#middlemiddlebox').addClass(whichHotel());
       console.log(board);
     } else {
       cpuChoice();    }
@@ -273,9 +287,6 @@ function updateCpuScore(){
   cpuScoreText.innerHTML = cpuScore;
 }
 
-//add a picture of jack to square that is specified as argument
-
-
 //gameOver check to see if hotel has won 3 times
 function checkGameOver(){
   if (cpuScore > 2){
@@ -298,22 +309,17 @@ function resetBoard(){
   for (var i = 0; i < board.length; i++){
     board[i] = null;
   }
-  console.log(board + 'reseting board');
-  $('#topleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#topmiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#toprightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#middleleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#middlemiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#middlerightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#bottomleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#bottommiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
-  $('#bottomrightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3');
+  $('#topleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#topmiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#toprightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#middleleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#middlemiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#middlerightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#bottomleftbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#bottommiddlebox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  $('#bottomrightbox').removeClass('boxbrown boxjack1 boxjack2 boxjack3 boxhotel1 boxhotel2 boxhotel3 boxhotel4 boxhotel5 boxhotel6 boxhotel7');
+  coinToss();
 }
-
-//image link arrays
-var jackPic = ["url('file:///Users/colin/Desktop/tictactoe/images/jacks/1jack.jpg');",
-            "url('file:///Users/colin/Desktop/tictactoe/images/jacks/2jack.jpg')",
-            "url('file:///Users/colin/Desktop/tictactoe/images/jacks/3jack.jpg')"];
 
 
 //Event Handlers
