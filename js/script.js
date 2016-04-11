@@ -153,7 +153,6 @@ function checkUserWin(){
   } else {
     cpuChoice();
   }
-  checkTie()
   updatePlayerScore();
 }
 
@@ -240,6 +239,7 @@ function cpuChoice(){
     } else {
       cpuChoice();    }
   }
+  checkTie();
   checkCpuWin();
 }
 
