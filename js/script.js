@@ -287,7 +287,7 @@ function updateIntroText(){
   if (cpuScore === 1){
     introText.innerHTML = "Hello, Danny. Come and play with us. Come and play with us, Danny. Forever... and ever... and ever.";
   } else if (cpuScore === 2){
-    introText.innerHTML = "I dreamed that I, that I killed you and Danny. But I didn't just kill ya. I cut you up in little pieces. Oh my God. I must be losing my mind.";
+    introText.innerHTML = "Here's Johnny!";
   }
 }
 
