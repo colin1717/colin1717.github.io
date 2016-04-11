@@ -84,7 +84,6 @@ function userClick(square){
        $('#bottomrightbox').addClass(whichJack());
     }
   }
-  checkTie();
   checkUserWin();
 }
 
@@ -153,6 +152,7 @@ function checkUserWin(){
   } else {
     cpuChoice();
   }
+  checkTie();
   updatePlayerScore();
 }
 
