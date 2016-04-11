@@ -1,5 +1,5 @@
 body {
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/shiningtrim.jpg);
+  background-image: url(../images/shiningtrim.jpg);
   font-family: 'Copse', serif;
 }
 
@@ -97,27 +97,27 @@ header {
 }
 
 .boxjack1{
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/jacks/1jack.jpg);
+  background-image: url(../images/jacks/1jack.jpg);
 }
 
 .boxjack2{
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/jacks/2jack.jpg);
+  background-image: url(../images/jacks/2jack.jpg);
 }
 
 .boxjack3{
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/jacks/3jack.jpg);
+  background-image: url(../images/jacks/3jack.jpg);
 }
 
 .boxhotel1 {
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/hotels/bartender.jpg);
+  background-image: url(../images/hotels/bartender.jpg);
 }
 
 .boxhotel2 {
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/hotels/twins.jpg);
+  background-image: url(../images/hotels/twins.jpg);
 }
 
 .boxhotel3 {
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/hotels/shelly.jpg);
+  background-image: url(../images/hotels/shelly.jpg);
 }
 
 .boxbrown {
@@ -125,7 +125,7 @@ header {
 }
 
 .coldjack {
-  background-image: url(file:///Users/colin/Desktop/tictactoe/images/jacks/coldjack.jpg);
+  background-image: url(../images/jacks/coldjack.jpg);
 }
 
 #topmiddlebox {
