@@ -84,6 +84,7 @@ function userClick(square){
        $('#bottomrightbox').addClass(whichJack());
     }
   }
+  checkTie();
   checkUserWin();
 }
 
@@ -152,6 +153,7 @@ function checkUserWin(){
   } else {
     cpuChoice();
   }
+  checkTie()
   updatePlayerScore();
 }
 
@@ -239,6 +241,19 @@ function cpuChoice(){
       cpuChoice();    }
   }
   checkCpuWin();
+}
+
+//check for tie conditions
+function checkTie(){
+  var boardFull = true;
+  for (var i = 0; i < board.length; i++){
+    if (board[i] === null){
+      boardFull = false;
+    }
+  }if (boardFull){
+    cpuScore += 1;
+    resetBoard();
+  }
 }
 
 //check for CPU win conditions
